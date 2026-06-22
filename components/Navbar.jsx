@@ -106,21 +106,23 @@ export default function Navbar({ cta }) {
               flexShrink: 0,
             }}
           >
-            {/* Langue — toujours visible */}
-            <button onClick={toggle} className="mm-langbtn">
-              {lang === "fr" ? "EN" : "FR"}
-            </button>
-
-            {/* CTA desktop */}
-            {cta?.onClick ? (
-              <button onClick={cta.onClick} className="mm-cta">
-                {ctaLabel}
+            {/* Langue + CTA — masqués sur mobile via .mm-bar-actions, visibles dans le drawer */}
+            <div className="mm-bar-actions">
+              <button onClick={toggle} className="mm-langbtn">
+                {lang === "fr" ? "EN" : "FR"}
               </button>
-            ) : (
-              <Link href={cta?.href ?? "/"} className="mm-cta">
-                {ctaLabel}
-              </Link>
-            )}
+
+              {/* CTA desktop */}
+              {cta?.onClick ? (
+                <button onClick={cta.onClick} className="mm-cta">
+                  {ctaLabel}
+                </button>
+              ) : (
+                <Link href={cta?.href ?? "/"} className="mm-cta">
+                  {ctaLabel}
+                </Link>
+              )}
+            </div>
 
             {/* Hamburger — visible sous 860px */}
             <button

@@ -164,6 +164,12 @@ img, video, svg { max-width: 100%; height: auto; }
   .mm-nav-links { display: none !important; }
 }
 
+/* Bouton langue + CTA dans la barre : masqués sous 860px (déplacés dans le drawer) */
+.mm-bar-actions { display: flex; align-items: center; gap: 10px; }
+@media (max-width: 860px) {
+  .mm-bar-actions { display: none !important; }
+}
+
 /* Bouton hamburger : caché par défaut, visible sous 860px */
 .mm-burger {
   display: none;
