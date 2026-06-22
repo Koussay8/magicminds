@@ -137,3 +137,125 @@ body {
 }
 .mm-paperdl { transition: gap .15s; }
 .mm-paperdl:hover { gap: 12px !important; }
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE MOBILE-FIRST
+   Toute la logique de breakpoint est ici.
+   Les styles inline (style={{}}) ont une spécificité
+   plus haute → on utilise !important localisé aux
+   media queries mobiles uniquement.
+   ══════════════════════════════════════════════ */
+
+/* ── Images fluides ── */
+img, video, svg { max-width: 100%; height: auto; }
+
+/* ── Hooks de grille : collapse mobile ── */
+@media (max-width: 768px) {
+  .mm-grid   { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .mm-grid-2 { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; } /* logos 2-col */
+  .mm-section { padding-left: 20px !important; padding-right: 20px !important; }
+  .mm-chars  { flex-wrap: wrap !important; gap: 14px !important; }
+}
+
+/* ── Navbar mobile ── */
+/* Liens de navigation : masqués sous 860px (le drawer les remplace) */
+.mm-nav-links { display: flex; align-items: center; gap: 20px; }
+@media (max-width: 860px) {
+  .mm-nav-links { display: none !important; }
+}
+
+/* Bouton hamburger : caché par défaut, visible sous 860px */
+.mm-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 8px;
+  transition: background .15s;
+  flex-shrink: 0;
+}
+.mm-burger:hover { background: rgba(27, 37, 89, .06); }
+.mm-burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #1B2559;
+  border-radius: 2px;
+  transition: transform .2s, opacity .2s;
+}
+@media (max-width: 860px) {
+  .mm-burger { display: flex; }
+}
+
+/* Drawer plein écran (overlay mobile) */
+.mm-drawer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(251, 246, 233, .98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  animation: mmSlide .22s ease;
+}
+.mm-drawer.open { display: flex; }
+@media (min-width: 861px) {
+  .mm-drawer { display: none !important; }
+}
+
+/* Liens dans le drawer */
+.mm-drawer .mm-navlink {
+  font-size: 22px;
+  font-weight: 800;
+  opacity: .8;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.mm-drawer .mm-navlink:hover { opacity: 1; }
+
+/* Bouton fermer (×) en haut à droite du drawer */
+.mm-drawer-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 26px;
+  color: #1B2559;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.mm-drawer-close:hover { background: rgba(27, 37, 89, .08); }
+
+/* ── Media queries de capacité ── */
+/* Neutralise les hovers de transformation sur écrans tactiles */
+@media (hover: none) {
+  .mm-cta:hover, .mm-paper:hover { transform: none; }
+}
+
+/* Touch targets ≥ 44px pour les éléments interactifs inline */
+@media (pointer: coarse) {
+  .mm-navlink, .mm-langbtn, .mm-footlink {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}

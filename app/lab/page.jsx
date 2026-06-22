@@ -126,7 +126,7 @@ export default function LabPage() {
       <Navbar cta={{ label: t.cta, onClick: () => scrollTo("mm-lib") }} />
 
       {/* HERO */}
-      <section style={{ background: "linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 35%,#FBF6E9 75%)", padding: "140px 40px 80px", position: "relative", overflow: "hidden" }}>
+      <section className="mm-section" style={{ background: "linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 35%,#FBF6E9 75%)", padding: "140px 40px 80px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: 130, right: "10%", opacity: 0.5, animation: "cld 9s ease-in-out infinite", pointerEvents: "none" }}>
           <div style={{ position: "relative", width: 80, height: 36, background: "rgba(255,255,255,.9)", borderRadius: 999 }}>
             <div style={{ position: "absolute", top: -14, left: 12, width: 30, height: 30, background: "rgba(255,255,255,.9)", borderRadius: "50%" }} />
@@ -151,13 +151,13 @@ export default function LabPage() {
       </section>
 
       {/* TWO RESEARCH AXES */}
-      <section style={{ background: "#FFFFFF", padding: "clamp(64px,8vw,120px) 40px" }}>
+      <section className="mm-section" style={{ background: "#FFFFFF", padding: "clamp(64px,8vw,120px) 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 60 }}>
             <h2 style={{ fontFamily: "'Grandstander',cursive", fontSize: "clamp(28px,4vw,50px)", fontWeight: 900, color: "#1B2559", lineHeight: 1.04, marginBottom: 14, textShadow: "2px 2px 0 rgba(27,37,89,.07)" }}>{t.axes.title}</h2>
             <p style={{ fontSize: 17, fontWeight: 600, color: "#5A6178", maxWidth: 560, margin: "0 auto", lineHeight: 1.65, textWrap: "pretty" }}>{t.axes.sub}</p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+          <div className="mm-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
             {axesStyles.map((a) => (
               <div key={a.key} style={{ background: a.grad, borderRadius: 32, padding: "46px 42px", border: "1px solid rgba(27,37,89,.05)", position: "relative", overflow: "hidden" }}>
                 <div style={{ position: "absolute", top: -40, right: -40, width: 160, height: 160, background: a.blob, borderRadius: "50%", opacity: 0.08 }} />
@@ -171,7 +171,7 @@ export default function LabPage() {
       </section>
 
       {/* BIBLIOTHÈQUE ACADÉMIQUE */}
-      <section id="mm-lib" style={{ background: "#FBF6E9", padding: "clamp(64px,8vw,120px) 40px" }}>
+      <section id="mm-lib" className="mm-section" style={{ background: "#FBF6E9", padding: "clamp(64px,8vw,120px) 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 40, marginBottom: 48, flexWrap: "wrap" }}>
             <div>
@@ -209,7 +209,7 @@ export default function LabPage() {
           </div>
 
           {/* Cards grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
+          <div className="mm-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
             {papers.map((p, i) => (
               <div key={p.title} className="mm-paper" style={{ background: "#FFFFFF", borderRadius: 24, padding: "32px 30px", boxShadow: "0 8px 24px rgba(27,37,89,.06)", border: "1px solid rgba(27,37,89,.05)", display: "flex", flexDirection: "column", gap: 14, transition: "transform .2s,box-shadow .2s" }}>
                 <div style={{ display: "inline-block", background: p.tagBg, color: "#1B2559", padding: "4px 12px", borderRadius: 999, fontSize: 9, fontWeight: 800, letterSpacing: ".1em", alignSelf: "flex-start" }}>{p.tag}</div>
@@ -223,13 +223,13 @@ export default function LabPage() {
       </section>
 
       {/* METHOD / TRANSPARENCY BAND */}
-      <section style={{ background: "#1B2559", padding: "clamp(64px,8vw,110px) 40px", position: "relative", overflow: "hidden" }}>
+      <section className="mm-section" style={{ background: "#1B2559", padding: "clamp(64px,8vw,110px) 40px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: -70, left: -50, width: 240, height: 240, background: "rgba(184,230,200,.06)", borderRadius: "50%", pointerEvents: "none" }} />
         <div style={{ maxWidth: 880, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
           <div style={{ display: "inline-block", background: "#B8E6C8", color: "#1B2559", padding: "5px 16px", borderRadius: 999, fontSize: 10, fontWeight: 800, letterSpacing: ".14em", marginBottom: 24, boxShadow: "2px 2px 0 rgba(0,0,0,.2)" }}>{t.method.eyebrow}</div>
           <h2 style={{ fontFamily: "'Grandstander',cursive", fontSize: "clamp(26px,4vw,46px)", fontWeight: 900, color: "white", lineHeight: 1.1, marginBottom: 18 }}>{t.method.title}</h2>
           <p style={{ fontSize: 16, fontWeight: 600, color: "rgba(255,255,255,.55)", lineHeight: 1.7, maxWidth: 600, margin: "0 auto 40px", textWrap: "pretty" }}>{t.method.sub}</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20, textAlign: "left" }}>
+          <div className="mm-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20, textAlign: "left" }}>
             {methodItems.map((m) => (
               <div key={m.t} style={{ background: "rgba(255,255,255,.05)", border: "1px solid rgba(255,255,255,.1)", borderRadius: 20, padding: 24 }}>
                 <div style={{ fontSize: 28, marginBottom: 10 }}>{m.emoji}</div>

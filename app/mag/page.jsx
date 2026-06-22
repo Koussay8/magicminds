@@ -240,7 +240,7 @@ export default function MagPage() {
       <Navbar />
 
       {/* ── HERO ── */}
-      <section style={{ background: 'linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 40%,#FBF6E9 86%)', padding: '118px 40px 60px', position: 'relative', overflow: 'hidden' }}>
+      <section className="mm-section" style={{ background: 'linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 40%,#FBF6E9 86%)', padding: '118px 40px 60px', position: 'relative', overflow: 'hidden' }}>
         {/* Cloud 1 */}
         <div style={{ position: 'absolute', top: 140, left: '7%', opacity: .55, animation: 'cld 9s ease-in-out infinite', pointerEvents: 'none' }}>
           <div style={{ position: 'relative', width: 88, height: 38, background: 'rgba(255,255,255,.9)', borderRadius: 999 }}>
@@ -317,7 +317,7 @@ export default function MagPage() {
       </section>
 
       {/* ── FILTER TABS ── */}
-      <section style={{ background: '#FBF6E9', padding: '36px 40px 8px' }}>
+      <section className="mm-section" style={{ background: '#FBF6E9', padding: '36px 40px 8px' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto', display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center' }}>
           {t.filtersList.map(f => {
             const active = filter === f.id;
@@ -341,9 +341,9 @@ export default function MagPage() {
       </section>
 
       {/* ── ARTICLE GRID ── */}
-      <section style={{ background: '#FBF6E9', padding: '32px 40px clamp(56px,7vw,96px)' }}>
+      <section className="mm-section" style={{ background: '#FBF6E9', padding: '32px 40px clamp(56px,7vw,96px)' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 28 }}>
+          <div className="mm-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 28 }}>
             {filteredArts.map(a => (
               <div
                 key={a.id}
@@ -373,9 +373,9 @@ export default function MagPage() {
       </section>
 
       {/* ── NUTRISCORE ── */}
-      <section style={{ background: '#FFFFFF', padding: 'clamp(64px,8vw,120px) 40px' }}>
+      <section className="mm-section" style={{ background: '#FFFFFF', padding: 'clamp(64px,8vw,120px) 40px' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+          <div className="mm-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
             <div>
               <div style={{ display: 'inline-block', background: '#FFD83D', color: '#1B2559', padding: '5px 16px', borderRadius: 999, fontSize: 10, fontWeight: 800, letterSpacing: '.14em', marginBottom: 20, boxShadow: '2px 2px 0 rgba(27,37,89,.12)' }}>{t.nutri.eyebrow}</div>
               <h2 style={{ fontFamily: "'Grandstander',cursive", fontSize: 'clamp(30px,4.5vw,54px)', fontWeight: 900, color: '#1B2559', lineHeight: 1.04, marginBottom: 18, textShadow: '2px 2px 0 rgba(27,37,89,.07)' }}>{t.nutri.title}</h2>
@@ -405,11 +405,11 @@ export default function MagPage() {
       </section>
 
       {/* ── MEDIA ── */}
-      <section style={{ background: '#FBF6E9', padding: 'clamp(56px,7vw,96px) 40px' }}>
+      <section className="mm-section" style={{ background: '#FBF6E9', padding: 'clamp(56px,7vw,96px) 40px' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto' }}>
           <h2 style={{ fontFamily: "'Grandstander',cursive", fontSize: 'clamp(26px,3.6vw,44px)', fontWeight: 900, color: '#1B2559', textAlign: 'center', lineHeight: 1.06, marginBottom: 14, textShadow: '2px 2px 0 rgba(27,37,89,.07)' }}>{t.media.title}</h2>
           <p style={{ fontSize: 16, fontWeight: 600, color: '#5A6178', textAlign: 'center', maxWidth: 520, margin: '0 auto 44px', lineHeight: 1.6 }}>{t.media.sub}</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
+          <div className="mm-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
             {[
               { bg: '#C9B6F2', icon: '🎬', ...t.media.v },
               { bg: '#B8E6C8', icon: '🎙️', ...t.media.p },
@@ -474,7 +474,7 @@ export default function MagPage() {
               >{playing ? '❚❚ Pause' : `▶ ${lang === 'fr' ? 'Lire' : 'Play'}`}</button>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: 48, alignItems: 'start' }}>
+            <div className="mm-grid" style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: 48, alignItems: 'start' }}>
               {/* TOC */}
               <div style={{ position: 'sticky', top: 90 }}>
                 <div style={{ fontFamily: "'Grandstander',cursive", fontSize: 16, fontWeight: 800, color: '#1B2559', marginBottom: 16 }}>{t.toc}</div>
@@ -512,7 +512,7 @@ export default function MagPage() {
             {rdRelated.length > 0 && (
               <div style={{ marginTop: 72, borderTop: '1px solid rgba(27,37,89,.1)', paddingTop: 48 }}>
                 <h3 style={{ fontFamily: "'Grandstander',cursive", fontSize: 28, fontWeight: 900, color: '#1B2559', textAlign: 'center', marginBottom: 32, textShadow: '2px 2px 0 rgba(27,37,89,.06)' }}>{t.related}</h3>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24, maxWidth: 1000, margin: '0 auto' }}>
+                <div className="mm-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24, maxWidth: 1000, margin: '0 auto' }}>
                   {rdRelated.map(r => (
                     <div
                       key={r.id}

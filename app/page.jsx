@@ -240,7 +240,7 @@ export default function HomePage() {
         </div>
 
         {/* CHARACTERS */}
-        <div style={{ position: "relative", zIndex: 3, display: "flex", alignItems: "flex-end", justifyContent: "center", gap: 20, padding: "36px 40px 0", overflow: "hidden" }}>
+        <div className="mm-chars" style={{ position: "relative", zIndex: 3, display: "flex", alignItems: "flex-end", justifyContent: "center", gap: 20, padding: "36px 40px 0", overflow: "hidden" }}>
           {characters.map((c) => <Character key={c.label} c={c} />)}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
             <CosmoCanvas width={320} height={360} style={{ width: 160, height: 180, display: "block", filter: "drop-shadow(0 12px 24px rgba(255,158,122,.4))", cursor: "pointer" }} />
@@ -272,14 +272,14 @@ export default function HomePage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section style={{ background: "#FBF6E9", padding: "clamp(64px,8vw,120px) 40px" }}>
+      <section className="mm-section" style={{ background: "#FBF6E9", padding: "clamp(64px,8vw,120px) 40px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 68 }}>
             <div style={{ display: "inline-block", background: "#4E63E6", color: "white", padding: "5px 16px", borderRadius: 999, fontSize: 10, fontWeight: 800, letterSpacing: ".14em", marginBottom: 18, boxShadow: "var(--sh-sticker)" }}>{t.how.eyebrow}</div>
             <h2 style={{ fontFamily: "'Grandstander',cursive", fontSize: "clamp(30px,4.5vw,54px)", fontWeight: 900, color: "#1B2559", marginBottom: 14, lineHeight: 1.06, textShadow: "2px 2px 0 rgba(27,37,89,.07)" }}>{t.how.title}</h2>
             <p style={{ fontSize: 17, color: "#5A6178", maxWidth: 460, margin: "0 auto", lineHeight: 1.65, fontWeight: 600, textWrap: "pretty" }}>{t.how.sub}</p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
+          <div className="mm-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
             {t.how.pillars.map((p) => (
               <div key={p.title} style={{ background: "#FFFFFF", borderRadius: 32, padding: "44px 36px 40px", boxShadow: "var(--sh-card),var(--sh-sticker)", border: "1px solid rgba(27,37,89,.05)", position: "relative", overflow: "hidden" }}>
                 <div style={{ position: "absolute", top: -28, right: -28, width: 130, height: 130, background: p.color, borderRadius: "50%", opacity: 0.18, pointerEvents: "none" }} />
@@ -294,7 +294,7 @@ export default function HomePage() {
       </section>
 
       {/* VIDEO FOUNDER */}
-      <section style={{ background: "#1B2559", padding: "clamp(64px,8vw,120px) 40px" }}>
+      <section className="mm-section" style={{ background: "#1B2559", padding: "clamp(64px,8vw,120px) 40px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 40, marginBottom: 44, flexWrap: "wrap" }}>
             <div>
@@ -315,7 +315,7 @@ export default function HomePage() {
       </section>
 
       {/* FOUNDER MEMO */}
-      <section style={{ background: "#FBF6E9", padding: "clamp(64px,8vw,120px) 40px" }}>
+      <section className="mm-section" style={{ background: "#FBF6E9", padding: "clamp(64px,8vw,120px) 40px" }}>
         <div style={{ maxWidth: 820, margin: "0 auto", textAlign: "center" }}>
           <div style={{ display: "inline-block", background: "#B8E6C8", padding: "5px 16px", borderRadius: 999, fontSize: 10, fontWeight: 800, letterSpacing: ".14em", color: "#1B2559", marginBottom: 40, boxShadow: "var(--sh-sticker)" }}>{t.memo.label}</div>
           <blockquote style={{ fontFamily: "'Grandstander',cursive", fontSize: "clamp(22px,3.5vw,42px)", fontWeight: 800, color: "#1B2559", lineHeight: 1.28, marginBottom: 44, letterSpacing: "-.01em" }}>
@@ -323,7 +323,7 @@ export default function HomePage() {
           </blockquote>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14 }}>
             <div style={{ width: 52, height: 52, background: "linear-gradient(135deg,#C9B6F2,#4E63E6)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "var(--sh-sticker)" }}>
-              <img src="/uploads/logo.png" alt="" style={{ width: 30, height: "auto", filter: "brightness(10)" }} />
+              <img src="/uploads/logo.png" alt="" loading="lazy" decoding="async" style={{ width: 30, height: "auto", filter: "brightness(10)" }} />
             </div>
             <div style={{ textAlign: "left" }}>
               <div style={{ fontSize: 15, fontWeight: 800, color: "#1B2559" }}>{t.memo.author}</div>
@@ -334,7 +334,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section style={{ background: "#FFFFFF", padding: "clamp(64px,8vw,120px) 40px" }}>
+      <section className="mm-section" style={{ background: "#FFFFFF", padding: "clamp(64px,8vw,120px) 40px" }}>
         <div style={{ maxWidth: 780, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "'Grandstander',cursive", fontSize: "clamp(28px,4vw,50px)", fontWeight: 900, color: "#1B2559", textAlign: "center", marginBottom: 56, textShadow: "2px 2px 0 rgba(27,37,89,.07)" }}>{t.faq.title}</h2>
           <div>
@@ -362,7 +362,7 @@ export default function HomePage() {
       </section>
 
       {/* WAITLIST DARK CTA */}
-      <section style={{ background: "#1B2559", padding: "clamp(64px,8vw,120px) 40px", position: "relative", overflow: "hidden" }}>
+      <section className="mm-section" style={{ background: "#1B2559", padding: "clamp(64px,8vw,120px) 40px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: -80, right: -80, width: 280, height: 280, background: "rgba(201,182,242,.08)", borderRadius: "50%", pointerEvents: "none" }} />
         <div style={{ position: "absolute", bottom: -60, left: -60, width: 220, height: 220, background: "rgba(184,230,200,.06)", borderRadius: "50%", pointerEvents: "none" }} />
         <div style={{ maxWidth: 600, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>

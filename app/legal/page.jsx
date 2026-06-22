@@ -179,7 +179,7 @@ export default function LegalPage() {
       <Navbar />
 
       {/* HERO */}
-      <section style={{ background: 'linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 42%,#FBF6E9 88%)', padding: '140px 40px 64px', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
+      <section className="mm-section" style={{ background: 'linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 42%,#FBF6E9 88%)', padding: '140px 40px 64px', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
         <div style={{ position: 'absolute', top: 120, left: '9%', opacity: .5, animation: 'cld 9s ease-in-out infinite', pointerEvents: 'none' }}>
           <div style={{ position: 'relative', width: 84, height: 36, background: 'rgba(255,255,255,.9)', borderRadius: 999 }}>
             <div style={{ position: 'absolute', top: -14, left: 12, width: 30, height: 30, background: 'rgba(255,255,255,.9)', borderRadius: '50%' }} />
@@ -194,8 +194,8 @@ export default function LegalPage() {
       </section>
 
       {/* BODY: SIDEBAR + CONTENT */}
-      <section style={{ background: '#FBF6E9', padding: 'clamp(40px,5vw,72px) 40px clamp(64px,8vw,110px)' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '268px 1fr', gap: 40, alignItems: 'start' }}>
+      <section className="mm-section" style={{ background: '#FBF6E9', padding: 'clamp(40px,5vw,72px) 40px clamp(64px,8vw,110px)' }}>
+        <div className="mm-grid" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '268px 1fr', gap: 40, alignItems: 'start' }}>
 
           {/* Sidebar */}
           <aside style={{ position: 'sticky', top: 96, display: 'flex', flexDirection: 'column', gap: 8 }}>

@@ -1,6 +1,8 @@
 import "./globals.css";
 import { LanguageProvider } from "@/components/LanguageProvider";
 
+export const viewport = { width: "device-width", initialScale: 1, viewportFit: "cover" };
+
 export const metadata = {
   title: "Magic Minds — Le NutriScore pour les écrans",
   description:

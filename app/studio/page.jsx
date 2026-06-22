@@ -149,9 +149,9 @@ export default function StudioPage() {
       </section>
 
       {/* IP */}
-      <section style={{ background: "#FFFFFF", padding: "clamp(64px,8vw,120px) 40px" }}>
+      <section className="mm-section" style={{ background: "#FFFFFF", padding: "clamp(64px,8vw,120px) 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
+          <div className="mm-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
             <div>
               <div style={{ display: "inline-block", background: "#B8E6C8", color: "#1B2559", padding: "5px 16px", borderRadius: 999, fontSize: 10, fontWeight: 800, letterSpacing: ".14em", marginBottom: 20, boxShadow: "2px 2px 0 rgba(27,37,89,.1)" }}>{t.ip.eyebrow}</div>
               <h2 style={{ fontFamily: "'Grandstander',cursive", fontSize: "clamp(30px,4.5vw,54px)", fontWeight: 900, color: "#1B2559", lineHeight: 1.04, marginBottom: 20, textShadow: "2px 2px 0 rgba(27,37,89,.07)" }}>{t.ip.title}</h2>
@@ -162,7 +162,7 @@ export default function StudioPage() {
               <div style={{ position: "absolute", top: 24, left: 28, fontSize: 18, opacity: 0.5 }}>✦</div>
               <div style={{ position: "absolute", top: 60, right: 40, fontSize: 13, opacity: 0.4 }}>✦</div>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8, marginBottom: 14 }}>
-                <img src="/uploads/Pico-0401.png" alt="Pico, le lion roux, personnage du Chimera World" style={{ width: 86, height: "auto", animation: "flt2 4.2s ease-in-out .6s infinite", filter: "drop-shadow(0 8px 16px rgba(232,90,60,.3))" }} />
+                <img src="/uploads/Pico-0401.png" alt="Pico, le lion roux, personnage du Chimera World" loading="lazy" decoding="async" style={{ width: 86, height: "auto", animation: "flt2 4.2s ease-in-out .6s infinite", filter: "drop-shadow(0 8px 16px rgba(232,90,60,.3))" }} />
                 <div style={{ background: "rgba(27,37,89,.06)", padding: "3px 10px", borderRadius: 999, fontSize: 9, fontWeight: 800, letterSpacing: ".1em", color: "#5A6178" }}>PICO</div>
               </div>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
@@ -170,7 +170,7 @@ export default function StudioPage() {
                 <div style={{ background: "#FFD83D", padding: "3px 12px", borderRadius: 999, fontSize: 9, fontWeight: 800, letterSpacing: ".1em", color: "#1B2559", boxShadow: "2px 2px 0 rgba(27,37,89,.12)" }}>COSMO ✦</div>
               </div>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8, marginBottom: 26 }}>
-                <img src="/uploads/Rilo-0402.png" alt="Rilo, l'ours vert, personnage du Chimera World" style={{ width: 82, height: "auto", animation: "flt2 3.8s ease-in-out 1.1s infinite", filter: "drop-shadow(0 8px 16px rgba(46,204,113,.3))" }} />
+                <img src="/uploads/Rilo-0402.png" alt="Rilo, l'ours vert, personnage du Chimera World" loading="lazy" decoding="async" style={{ width: 82, height: "auto", animation: "flt2 3.8s ease-in-out 1.1s infinite", filter: "drop-shadow(0 8px 16px rgba(46,204,113,.3))" }} />
                 <div style={{ background: "rgba(27,37,89,.06)", padding: "3px 10px", borderRadius: 999, fontSize: 9, fontWeight: 800, letterSpacing: ".1em", color: "#5A6178" }}>RILO</div>
               </div>
             </div>
@@ -179,13 +179,13 @@ export default function StudioPage() {
       </section>
 
       {/* WAYS */}
-      <section style={{ background: "#FBF6E9", padding: "clamp(64px,8vw,120px) 40px" }}>
+      <section className="mm-section" style={{ background: "#FBF6E9", padding: "clamp(64px,8vw,120px) 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 60 }}>
             <h2 style={{ fontFamily: "'Grandstander',cursive", fontSize: "clamp(28px,4vw,48px)", fontWeight: 900, color: "#1B2559", lineHeight: 1.06, marginBottom: 14, textShadow: "2px 2px 0 rgba(27,37,89,.07)" }}>{t.ways.title}</h2>
             <p style={{ fontSize: 17, fontWeight: 600, color: "#5A6178", maxWidth: 520, margin: "0 auto", lineHeight: 1.65, textWrap: "pretty" }}>{t.ways.sub}</p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+          <div className="mm-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
             {[t.ways.a, t.ways.b].map((w, i) => (
               <div key={i} style={{ background: "#FFFFFF", borderRadius: 32, padding: "44px 40px", boxShadow: "0 10px 30px rgba(27,37,89,.08),3px 3px 0 rgba(27,37,89,.1)", border: "1px solid rgba(27,37,89,.05)", position: "relative", overflow: "hidden" }}>
                 <div style={{ position: "absolute", top: -30, right: -30, width: 140, height: 140, background: w.color, borderRadius: "50%", opacity: 0.16, pointerEvents: "none" }} />
@@ -200,7 +200,7 @@ export default function StudioPage() {
       </section>
 
       {/* FORM */}
-      <section id="mm-form" style={{ background: "#FFFFFF", padding: "clamp(64px,8vw,120px) 40px" }}>
+      <section id="mm-form" className="mm-section" style={{ background: "#FFFFFF", padding: "clamp(64px,8vw,120px) 40px" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", background: "#FBF6E9", borderRadius: 36, padding: "clamp(36px,5vw,64px)", boxShadow: "0 16px 40px rgba(27,37,89,.1)" }}>
           <div style={{ display: "flex", justifyContent: "space-between", gap: 32, alignItems: "flex-start", marginBottom: 40, flexWrap: "wrap" }}>
             <div style={{ flex: 1, minWidth: 280 }}>
@@ -214,7 +214,7 @@ export default function StudioPage() {
             </div>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px 28px" }}>
+          <div className="mm-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px 28px" }}>
             <div>
               <label style={labelStyle}>{t.form.name}</label>
               <input type="text" placeholder={t.form.namePh} style={inputStyle} />
@@ -254,14 +254,14 @@ export default function StudioPage() {
       </section>
 
       {/* PARTNERSHIPS */}
-      <section id="mm-partners" style={{ background: "#FBF6E9", padding: "clamp(64px,8vw,120px) 40px" }}>
+      <section id="mm-partners" className="mm-section" style={{ background: "#FBF6E9", padding: "clamp(64px,8vw,120px) 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
             <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: ".16em", color: "#FF9E7A", marginBottom: 16 }}>{t.partners.eyebrow}</div>
             <h2 style={{ fontFamily: "'Grandstander',cursive", fontSize: "clamp(34px,5vw,64px)", fontWeight: 900, color: "#1B2559", lineHeight: 1.02, marginBottom: 18, textShadow: "3px 3px 0 rgba(27,37,89,.08)" }}>{t.partners.title}</h2>
             <p style={{ fontSize: 17, fontWeight: 600, color: "#5A6178", maxWidth: 600, margin: "0 auto", lineHeight: 1.65, textWrap: "pretty" }}>{t.partners.sub}</p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
+          <div className="mm-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
             {t.partners.cards.map((c) => (
               <div key={c.t} style={{ background: "#FFFFFF", borderRadius: 28, padding: "38px 32px", boxShadow: "0 10px 30px rgba(27,37,89,.07)", border: "1px solid rgba(27,37,89,.05)" }}>
                 <div style={{ width: 56, height: 56, background: c.color, borderRadius: 18, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 28, marginBottom: 22, boxShadow: "2px 2px 0 rgba(27,37,89,.1)" }}>{c.emoji}</div>
@@ -274,7 +274,7 @@ export default function StudioPage() {
       </section>
 
       {/* DARK CTA */}
-      <section style={{ background: "#1B2559", padding: "clamp(64px,8vw,110px) 40px", position: "relative", overflow: "hidden" }}>
+      <section className="mm-section" style={{ background: "#1B2559", padding: "clamp(64px,8vw,110px) 40px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: -70, right: -70, width: 260, height: 260, background: "rgba(201,182,242,.08)", borderRadius: "50%", pointerEvents: "none" }} />
         <div style={{ position: "absolute", bottom: -60, left: -60, width: 220, height: 220, background: "rgba(184,230,200,.06)", borderRadius: "50%", pointerEvents: "none" }} />
         <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>

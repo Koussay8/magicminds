@@ -77,7 +77,7 @@ export default function Footer({ rich = false, onNewsletter, socials: socialsPro
   const BrandCol = (
     <div>
       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-        <img src="/uploads/logo.png" alt="Magic Minds" style={{ height: rich ? 36 : 34, width: "auto" }} />
+        <img src="/uploads/logo.png" alt="Magic Minds" loading="lazy" decoding="async" style={{ height: rich ? 36 : 34, width: "auto" }} />
         <span style={{ fontFamily: "'Grandstander',cursive", fontWeight: 800, fontSize: 17, color: "white" }}>Magic Minds</span>
       </div>
       <p style={{ fontSize: 14, color: "rgba(255,255,255,.35)", lineHeight: 1.6, marginBottom: rich ? 6 : 0, fontWeight: 600 }}>{f.tagline}</p>
@@ -119,6 +119,7 @@ export default function Footer({ rich = false, onNewsletter, socials: socialsPro
       <div style={{ padding: "56px 40px 36px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div
+            className="mm-grid-2"
             style={{
               display: "grid",
               gridTemplateColumns: "1.6fr 1fr 1fr 1fr",

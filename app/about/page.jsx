@@ -86,7 +86,7 @@ export default function AboutPage() {
       <Navbar />
 
       {/* HERO */}
-      <section style={{ background: 'linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 40%,#FBF6E9 84%)', padding: '150px 40px 80px', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
+      <section className="mm-section" style={{ background: 'linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 40%,#FBF6E9 84%)', padding: '150px 40px 80px', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
         <div style={{ position: 'absolute', top: 130, left: '8%', opacity: .5, animation: 'cld 9s ease-in-out infinite', pointerEvents: 'none' }}>
           <div style={{ position: 'relative', width: 84, height: 36, background: 'rgba(255,255,255,.9)', borderRadius: 999 }}>
             <div style={{ position: 'absolute', top: -14, left: 12, width: 30, height: 30, background: 'rgba(255,255,255,.9)', borderRadius: '50%' }} />
@@ -101,7 +101,7 @@ export default function AboutPage() {
       </section>
 
       {/* MISSION */}
-      <section style={{ background: '#FFFFFF', padding: 'clamp(64px,8vw,110px) 40px' }}>
+      <section className="mm-section" style={{ background: '#FFFFFF', padding: 'clamp(64px,8vw,110px) 40px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
           <div style={{ display: 'inline-block', background: '#B8E6C8', color: '#1B2559', padding: '5px 16px', borderRadius: 999, fontSize: 10, fontWeight: 800, letterSpacing: '.14em', marginBottom: 28, boxShadow: '2px 2px 0 rgba(27,37,89,.1)' }}>{t.mission.eyebrow}</div>
           <p style={{ fontFamily: "'Grandstander',cursive", fontSize: 'clamp(24px,3.6vw,42px)', fontWeight: 800, color: '#1B2559', lineHeight: 1.28, letterSpacing: '-.01em' }}>{t.mission.text}</p>
@@ -109,7 +109,7 @@ export default function AboutPage() {
       </section>
 
       {/* PARTNERS */}
-      <section style={{ background: '#FBF6E9', padding: '56px 40px' }}>
+      <section className="mm-section" style={{ background: '#FBF6E9', padding: '56px 40px' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: 11, fontWeight: 800, letterSpacing: '.16em', color: '#5A6178', opacity: .6, marginBottom: 32, textTransform: 'uppercase' }}>{t.partners.title}</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: 18 }}>
@@ -124,13 +124,13 @@ export default function AboutPage() {
       </section>
 
       {/* TEAM */}
-      <section style={{ background: '#FFFFFF', padding: 'clamp(64px,8vw,110px) 40px' }}>
+      <section className="mm-section" style={{ background: '#FFFFFF', padding: 'clamp(64px,8vw,110px) 40px' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
             <div style={{ display: 'inline-block', background: '#C9B6F2', color: '#1B2559', padding: '5px 16px', borderRadius: 999, fontSize: 10, fontWeight: 800, letterSpacing: '.14em', marginBottom: 18, boxShadow: '2px 2px 0 rgba(27,37,89,.1)' }}>{t.team.eyebrow}</div>
             <h2 style={{ fontFamily: "'Grandstander',cursive", fontSize: 'clamp(28px,4vw,50px)', fontWeight: 900, color: '#1B2559', lineHeight: 1.04, textShadow: '2px 2px 0 rgba(27,37,89,.07)' }}>{t.team.title}</h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: 20 }}>
+          <div className="mm-grid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: 20 }}>
             {t.teamList.map((m, i) => (
               <div key={i} style={{ background: '#FBF6E9', borderRadius: 24, padding: '28px 20px', textAlign: 'center', boxShadow: '0 8px 24px rgba(27,37,89,.06)', border: '1px solid rgba(27,37,89,.05)' }}>
                 <div style={{ width: 84, height: 84, borderRadius: '50%', background: m.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Grandstander',cursive", fontSize: 30, fontWeight: 900, color: 'white', margin: '0 auto 16px', boxShadow: '3px 3px 0 rgba(27,37,89,.12)' }}>{m.initials}</div>
@@ -143,14 +143,14 @@ export default function AboutPage() {
       </section>
 
       {/* BOARD */}
-      <section style={{ background: '#FBF6E9', padding: 'clamp(56px,7vw,100px) 40px' }}>
+      <section className="mm-section" style={{ background: '#FBF6E9', padding: 'clamp(56px,7vw,100px) 40px' }}>
         <div style={{ maxWidth: 1000, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
             <div style={{ display: 'inline-block', background: '#FF9E7A', color: '#1B2559', padding: '5px 16px', borderRadius: 999, fontSize: 10, fontWeight: 800, letterSpacing: '.14em', marginBottom: 18, boxShadow: '2px 2px 0 rgba(27,37,89,.1)' }}>{t.board.eyebrow}</div>
             <h2 style={{ fontFamily: "'Grandstander',cursive", fontSize: 'clamp(26px,3.6vw,44px)', fontWeight: 900, color: '#1B2559', lineHeight: 1.04, marginBottom: 12, textShadow: '2px 2px 0 rgba(27,37,89,.07)' }}>{t.board.title}</h2>
             <p style={{ fontSize: 16, fontWeight: 600, color: '#5A6178', maxWidth: 520, margin: '0 auto', lineHeight: 1.6 }}>{t.board.sub}</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 20 }}>
+          <div className="mm-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 20 }}>
             {t.boardList.map((b, i) => (
               <div key={i} style={{ background: 'white', borderRadius: 22, padding: '26px 28px', display: 'flex', alignItems: 'center', gap: 18, boxShadow: '0 8px 24px rgba(27,37,89,.06)', border: '1px solid rgba(27,37,89,.05)' }}>
                 <div style={{ width: 60, height: 60, borderRadius: '50%', background: b.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Grandstander',cursive", fontSize: 22, fontWeight: 900, color: 'white', flexShrink: 0, boxShadow: '2px 2px 0 rgba(27,37,89,.12)' }}>{b.initials}</div>
@@ -165,13 +165,13 @@ export default function AboutPage() {
       </section>
 
       {/* VALUES */}
-      <section style={{ background: '#FFFFFF', padding: 'clamp(64px,8vw,110px) 40px' }}>
+      <section className="mm-section" style={{ background: '#FFFFFF', padding: 'clamp(64px,8vw,110px) 40px' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
             <div style={{ display: 'inline-block', background: '#FFD83D', color: '#1B2559', padding: '5px 16px', borderRadius: 999, fontSize: 10, fontWeight: 800, letterSpacing: '.14em', marginBottom: 18, boxShadow: '2px 2px 0 rgba(27,37,89,.1)' }}>{t.values.eyebrow}</div>
             <h2 style={{ fontFamily: "'Grandstander',cursive", fontSize: 'clamp(28px,4vw,50px)', fontWeight: 900, color: '#1B2559', lineHeight: 1.04, textShadow: '2px 2px 0 rgba(27,37,89,.07)' }}>{t.values.title}</h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 22 }}>
+          <div className="mm-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 22 }}>
             {t.valuesList.map((v, i) => (
               <div key={i} style={{ background: '#FBF6E9', borderRadius: 26, padding: '34px 28px', boxShadow: '0 8px 24px rgba(27,37,89,.05)', border: '1px solid rgba(27,37,89,.05)' }}>
                 <div style={{ width: 58, height: 58, borderRadius: 18, background: v.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28, marginBottom: 18, boxShadow: '2px 2px 0 rgba(27,37,89,.1)' }}>{v.icon}</div>
@@ -184,7 +184,7 @@ export default function AboutPage() {
       </section>
 
       {/* VISION */}
-      <section style={{ background: '#1B2559', padding: 'clamp(64px,8vw,110px) 40px', position: 'relative', overflow: 'hidden' }}>
+      <section className="mm-section" style={{ background: '#1B2559', padding: 'clamp(64px,8vw,110px) 40px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: -70, right: -70, width: 260, height: 260, background: 'rgba(201,182,242,.08)', borderRadius: '50%', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', bottom: -60, left: -60, width: 220, height: 220, background: 'rgba(184,230,200,.06)', borderRadius: '50%', pointerEvents: 'none' }} />
         <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
