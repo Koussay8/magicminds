@@ -150,11 +150,34 @@ body {
 img, video, svg { max-width: 100%; height: auto; }
 
 /* ── Hooks de grille : collapse mobile ── */
+
+/* Palier tablette : grilles 3-4 col → 2 col (transition douce) */
+@media (max-width: 1000px) and (min-width: 769px) {
+  .mm-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
+}
+
+/* Palier mobile standard */
 @media (max-width: 768px) {
   .mm-grid   { grid-template-columns: 1fr !important; gap: 20px !important; }
-  .mm-grid-2 { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; } /* logos 2-col */
+  .mm-grid-2 { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; } /* 2 col tablette */
   .mm-section { padding-left: 20px !important; padding-right: 20px !important; }
+  .mm-hero  { padding-left: 20px !important; padding-right: 20px !important; }
   .mm-chars  { flex-wrap: wrap !important; gap: 14px !important; }
+}
+
+/* Palier petit mobile : corrections supplémentaires */
+@media (max-width: 520px) {
+  /* mm-grid-2 passe en 1 colonne (corrige équipe About 5-col et Footer 4-col) */
+  .mm-grid-2 { grid-template-columns: 1fr !important; gap: 16px !important; }
+}
+
+@media (max-width: 480px) {
+  .mm-section { padding-left: 16px !important; padding-right: 16px !important; }
+  /* Sections héros : réduire le padding-top/bottom pour petits écrans */
+  .mm-hero   { padding-top: 92px !important; padding-bottom: 56px !important;
+               padding-left: 16px !important; padding-right: 16px !important; }
+  /* Masquer les décoratifs absolus (clouds, blobs) qui chevauchent les titres */
+  .mm-decor  { display: none !important; }
 }
 
 /* ── Navbar mobile ── */

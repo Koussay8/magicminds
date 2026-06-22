@@ -116,7 +116,7 @@ export default function Footer({ rich = false, onNewsletter, socials: socialsPro
         </div>
       )}
 
-      <div style={{ padding: "56px 40px 36px" }}>
+      <div className="mm-section" style={{ padding: "56px 40px 36px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div
             className="mm-grid-2"

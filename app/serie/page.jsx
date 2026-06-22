@@ -40,16 +40,16 @@ export default function SeriePage() {
       <Navbar />
 
       {/* HERO / COMING SOON */}
-      <section style={{ flex: 1, background: 'linear-gradient(168deg,#EEE8FF 0%,#DCF0FF 45%,#FBF6E9 90%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '150px 32px 90px', position: 'relative', overflow: 'hidden' }}>
+      <section className="mm-hero" style={{ flex: 1, background: 'linear-gradient(168deg,#EEE8FF 0%,#DCF0FF 45%,#FBF6E9 90%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '150px 32px 90px', position: 'relative', overflow: 'hidden' }}>
         {/* Cloud 1 */}
-        <div style={{ position: 'absolute', top: 140, left: '9%', opacity: .6, animation: 'cld 8s ease-in-out infinite', pointerEvents: 'none' }}>
+        <div className="mm-decor" style={{ position: 'absolute', top: 140, left: '9%', opacity: .6, animation: 'cld 8s ease-in-out infinite', pointerEvents: 'none' }}>
           <div style={{ position: 'relative', width: 96, height: 42, background: 'rgba(255,255,255,.9)', borderRadius: 999 }}>
             <div style={{ position: 'absolute', top: -16, left: 14, width: 36, height: 36, background: 'rgba(255,255,255,.9)', borderRadius: '50%' }} />
             <div style={{ position: 'absolute', top: -24, left: 36, width: 46, height: 46, background: 'rgba(255,255,255,.9)', borderRadius: '50%' }} />
           </div>
         </div>
         {/* Cloud 2 */}
-        <div style={{ position: 'absolute', top: 210, right: '10%', opacity: .45, animation: 'cld 10s ease-in-out 2s infinite', pointerEvents: 'none' }}>
+        <div className="mm-decor" style={{ position: 'absolute', top: 210, right: '10%', opacity: .45, animation: 'cld 10s ease-in-out 2s infinite', pointerEvents: 'none' }}>
           <div style={{ position: 'relative', width: 70, height: 32, background: 'rgba(255,255,255,.9)', borderRadius: 999 }}>
             <div style={{ position: 'absolute', top: -12, left: 10, width: 28, height: 28, background: 'rgba(255,255,255,.9)', borderRadius: '50%' }} />
             <div style={{ position: 'absolute', top: -18, left: 26, width: 36, height: 36, background: 'rgba(255,255,255,.9)', borderRadius: '50%' }} />

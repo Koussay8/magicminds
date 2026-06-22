@@ -57,16 +57,17 @@ export default function Navbar({ cta }) {
         </span>
       </Link>
 
-      {/* ── Right box: lang switcher + burger ── */}
+      {/* ── Right box: lang switcher + burger (pilule douce) ── */}
       <div
         style={{
           display: "flex",
           alignItems: "center",
-          gap: 12,
-          background: "#FBF6E9",
-          border: "2px solid #1B2559",
-          padding: "8px 14px",
-          boxShadow: "2px 3px 0px rgba(27,37,89,0.15)",
+          gap: 8,
+          background: "#FFFFFF",
+          borderRadius: 999,
+          border: "1.5px solid rgba(78,99,230,.18)",
+          padding: "6px 8px 6px 14px",
+          boxShadow: "0 10px 30px rgba(27,37,89,.08), 3px 3px 0 rgba(27,37,89,.08)",
           pointerEvents: "all",
           flexShrink: 0,
         }}
@@ -81,12 +82,13 @@ export default function Navbar({ cta }) {
               fontWeight: 800,
               textTransform: "uppercase",
               letterSpacing: "0.05em",
-              padding: "4px 8px",
+              padding: "5px 10px",
+              borderRadius: 999,
               cursor: "pointer",
               border: "none",
               transition: "background .15s, color .15s",
               ...(locale === lang
-                ? { background: "#1B2559", color: "#FBF6E9" }
+                ? { background: "#4E63E6", color: "#FFFFFF" }
                 : { background: "transparent", color: "rgba(27,37,89,.45)" }),
             }}
           >

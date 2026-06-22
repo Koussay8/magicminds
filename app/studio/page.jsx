@@ -158,7 +158,7 @@ export default function StudioPage() {
               <p style={{ fontSize: 16, fontWeight: 600, color: "#5A6178", lineHeight: 1.75, marginBottom: 18, textWrap: "pretty" }}>{t.ip.p1}</p>
               <p style={{ fontSize: 16, fontWeight: 600, color: "#5A6178", lineHeight: 1.75, textWrap: "pretty" }}>{t.ip.p2}</p>
             </div>
-            <div style={{ background: "linear-gradient(155deg,#DCF0FF,#EEE8FF)", borderRadius: 32, padding: "48px 32px", display: "flex", alignItems: "flex-end", justifyContent: "center", gap: 18, boxShadow: "inset 0 2px 20px rgba(27,37,89,.05)", minHeight: 340, position: "relative", overflow: "hidden" }}>
+            <div style={{ background: "linear-gradient(155deg,#DCF0FF,#EEE8FF)", borderRadius: 32, padding: "48px 32px", display: "flex", alignItems: "flex-end", justifyContent: "center", gap: 18, flexWrap: "wrap", boxShadow: "inset 0 2px 20px rgba(27,37,89,.05)", minHeight: 340, position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", top: 24, left: 28, fontSize: 18, opacity: 0.5 }}>✦</div>
               <div style={{ position: "absolute", top: 60, right: 40, fontSize: 13, opacity: 0.4 }}>✦</div>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8, marginBottom: 14 }}>

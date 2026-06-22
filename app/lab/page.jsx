@@ -126,8 +126,8 @@ export default function LabPage() {
       <Navbar cta={{ label: t.cta, onClick: () => scrollTo("mm-lib") }} />
 
       {/* HERO */}
-      <section className="mm-section" style={{ background: "linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 35%,#FBF6E9 75%)", padding: "140px 40px 80px", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", top: 130, right: "10%", opacity: 0.5, animation: "cld 9s ease-in-out infinite", pointerEvents: "none" }}>
+      <section className="mm-section mm-hero" style={{ background: "linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 35%,#FBF6E9 75%)", padding: "140px 40px 80px", position: "relative", overflow: "hidden" }}>
+        <div className="mm-decor" style={{ position: "absolute", top: 130, right: "10%", opacity: 0.5, animation: "cld 9s ease-in-out infinite", pointerEvents: "none" }}>
           <div style={{ position: "relative", width: 80, height: 36, background: "rgba(255,255,255,.9)", borderRadius: 999 }}>
             <div style={{ position: "absolute", top: -14, left: 12, width: 30, height: 30, background: "rgba(255,255,255,.9)", borderRadius: "50%" }} />
             <div style={{ position: "absolute", top: -20, left: 28, width: 40, height: 40, background: "rgba(255,255,255,.9)", borderRadius: "50%" }} />

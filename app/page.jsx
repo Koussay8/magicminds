@@ -149,9 +149,9 @@ const partners = [
 
 const chip = { background: "rgba(27,37,89,.06)", padding: "3px 10px", borderRadius: 999, fontSize: 10, fontWeight: 800, letterSpacing: ".1em", color: "#5A6178" };
 
-function Cloud({ w, h, parts, style }) {
+function Cloud({ w, h, parts, style, className }) {
   return (
-    <div style={style}>
+    <div style={style} className={className}>
       <div style={{ position: "relative", width: w, height: h, background: "rgba(255,255,255,.9)", borderRadius: 999, boxShadow: "0 4px 16px rgba(27,37,89,.05)" }}>
         {parts.map((p, i) => (
           <div key={i} style={{ position: "absolute", ...p, background: "rgba(255,255,255,.9)", borderRadius: "50%" }} />
@@ -222,8 +222,8 @@ export default function HomePage() {
 
       {/* HERO */}
       <section style={{ minHeight: "100vh", background: "linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 20%,#EEE8FF 42%,#FBF6E9 68%)", display: "flex", flexDirection: "column", overflow: "hidden", position: "relative", paddingTop: 80 }}>
-        <Cloud w={110} h={48} parts={[{ top: -18, left: 14, width: 40, height: 40 }, { top: -28, left: 38, width: 52, height: 52 }, { top: -14, right: 8, width: 32, height: 32 }]} style={{ position: "absolute", top: 140, left: "5%", opacity: 0.7, animation: "cld 7s ease-in-out infinite", pointerEvents: "none", zIndex: 1 }} />
-        <Cloud w={80} h={36} parts={[{ top: -14, left: 10, width: 30, height: 30 }, { top: -22, left: 28, width: 42, height: 42 }, { top: -10, right: 6, width: 24, height: 24 }]} style={{ position: "absolute", top: 220, right: "7%", opacity: 0.55, animation: "cld 9s ease-in-out 2.5s infinite", pointerEvents: "none", zIndex: 1 }} />
+        <Cloud className="mm-decor" w={110} h={48} parts={[{ top: -18, left: 14, width: 40, height: 40 }, { top: -28, left: 38, width: 52, height: 52 }, { top: -14, right: 8, width: 32, height: 32 }]} style={{ position: "absolute", top: 140, left: "5%", opacity: 0.7, animation: "cld 7s ease-in-out infinite", pointerEvents: "none", zIndex: 1 }} />
+        <Cloud className="mm-decor" w={80} h={36} parts={[{ top: -14, left: 10, width: 30, height: 30 }, { top: -22, left: 28, width: 42, height: 42 }, { top: -10, right: 6, width: 24, height: 24 }]} style={{ position: "absolute", top: 220, right: "7%", opacity: 0.55, animation: "cld 9s ease-in-out 2.5s infinite", pointerEvents: "none", zIndex: 1 }} />
 
         <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "56px 32px 12px", position: "relative", zIndex: 2 }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "white", border: "1.5px solid rgba(78,99,230,.2)", borderRadius: 999, padding: "8px 20px", fontSize: 13, fontWeight: 700, color: "#4E63E6", marginBottom: 28, boxShadow: "var(--sh-card),3px 3px 0 rgba(27,37,89,.08)" }}>

@@ -240,16 +240,16 @@ export default function MagPage() {
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="mm-section" style={{ background: 'linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 40%,#FBF6E9 86%)', padding: '118px 40px 60px', position: 'relative', overflow: 'hidden' }}>
+      <section className="mm-section mm-hero" style={{ background: 'linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 40%,#FBF6E9 86%)', padding: '118px 40px 60px', position: 'relative', overflow: 'hidden' }}>
         {/* Cloud 1 */}
-        <div style={{ position: 'absolute', top: 140, left: '7%', opacity: .55, animation: 'cld 9s ease-in-out infinite', pointerEvents: 'none' }}>
+        <div className="mm-decor" style={{ position: 'absolute', top: 140, left: '7%', opacity: .55, animation: 'cld 9s ease-in-out infinite', pointerEvents: 'none' }}>
           <div style={{ position: 'relative', width: 88, height: 38, background: 'rgba(255,255,255,.9)', borderRadius: 999 }}>
             <div style={{ position: 'absolute', top: -14, left: 12, width: 32, height: 32, background: 'rgba(255,255,255,.9)', borderRadius: '50%' }} />
             <div style={{ position: 'absolute', top: -22, left: 30, width: 42, height: 42, background: 'rgba(255,255,255,.9)', borderRadius: '50%' }} />
           </div>
         </div>
         {/* Cloud 2 */}
-        <div style={{ position: 'absolute', top: 170, right: '8%', opacity: .4, animation: 'cld 11s ease-in-out 2s infinite', pointerEvents: 'none' }}>
+        <div className="mm-decor" style={{ position: 'absolute', top: 170, right: '8%', opacity: .4, animation: 'cld 11s ease-in-out 2s infinite', pointerEvents: 'none' }}>
           <div style={{ position: 'relative', width: 64, height: 28, background: 'rgba(255,255,255,.9)', borderRadius: 999 }}>
             <div style={{ position: 'absolute', top: -10, left: 10, width: 24, height: 24, background: 'rgba(255,255,255,.9)', borderRadius: '50%' }} />
             <div style={{ position: 'absolute', top: -15, left: 24, width: 30, height: 30, background: 'rgba(255,255,255,.9)', borderRadius: '50%' }} />
@@ -431,7 +431,7 @@ export default function MagPage() {
       {openId && rd.id && (
         <div id="mm-reader" style={{ position: 'fixed', inset: 0, zIndex: 500, background: '#FBF6E9', overflowY: 'auto', animation: 'popin .35s ease both' }}>
           {/* Reader topbar */}
-          <div style={{ position: 'sticky', top: 0, zIndex: 10, background: 'rgba(251,246,233,.94)', backdropFilter: 'blur(14px)', borderBottom: '1px solid rgba(27,37,89,.08)', padding: '16px 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
+          <div className="mm-section" style={{ position: 'sticky', top: 0, zIndex: 10, background: 'rgba(251,246,233,.94)', backdropFilter: 'blur(14px)', borderBottom: '1px solid rgba(27,37,89,.08)', padding: '16px 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, fontWeight: 700, color: '#5A6178', minWidth: 0 }}>
               <span style={{ cursor: 'pointer', color: '#4E63E6' }} onClick={() => setOpenId(null)}>{t.bcHome}</span>
               <span style={{ opacity: .4 }}>/</span>
@@ -445,7 +445,7 @@ export default function MagPage() {
             >×</button>
           </div>
 
-          <div style={{ maxWidth: 1100, margin: '0 auto', padding: '48px 40px 100px', position: 'relative' }}>
+          <div className="mm-section" style={{ maxWidth: 1100, margin: '0 auto', padding: '48px 40px 100px', position: 'relative' }}>
             {/* Header */}
             <div style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto 32px' }}>
               <div style={{ display: 'inline-block', background: rd.tagBg, color: '#1B2559', padding: '5px 16px', borderRadius: 999, fontSize: 10, fontWeight: 800, letterSpacing: '.1em', marginBottom: 18, boxShadow: '2px 2px 0 rgba(27,37,89,.1)' }}>{rd.tag}</div>
@@ -462,7 +462,7 @@ export default function MagPage() {
             </div>
 
             {/* Audio player */}
-            <div style={{ background: 'linear-gradient(90deg,#F2F4F8,#EAF7EF)', border: '1px solid rgba(27,37,89,.07)', borderRadius: 16, padding: '14px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, maxWidth: 760, margin: '0 auto 40px' }}>
+            <div style={{ background: 'linear-gradient(90deg,#F2F4F8,#EAF7EF)', border: '1px solid rgba(27,37,89,.07)', borderRadius: 16, padding: '14px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, maxWidth: 760, margin: '0 auto 40px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <span style={{ fontSize: 19 }}>🔊</span>
                 <span style={{ fontSize: 15, fontWeight: 800, color: '#1B2559' }}>{t.listen}</span>

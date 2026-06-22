@@ -86,8 +86,8 @@ export default function AboutPage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="mm-section" style={{ background: 'linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 40%,#FBF6E9 84%)', padding: '150px 40px 80px', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
-        <div style={{ position: 'absolute', top: 130, left: '8%', opacity: .5, animation: 'cld 9s ease-in-out infinite', pointerEvents: 'none' }}>
+      <section className="mm-section mm-hero" style={{ background: 'linear-gradient(168deg,#DCF0FF 0%,#EDF5FF 40%,#FBF6E9 84%)', padding: '150px 40px 80px', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
+        <div className="mm-decor" style={{ position: 'absolute', top: 130, left: '8%', opacity: .5, animation: 'cld 9s ease-in-out infinite', pointerEvents: 'none' }}>
           <div style={{ position: 'relative', width: 84, height: 36, background: 'rgba(255,255,255,.9)', borderRadius: 999 }}>
             <div style={{ position: 'absolute', top: -14, left: 12, width: 30, height: 30, background: 'rgba(255,255,255,.9)', borderRadius: '50%' }} />
             <div style={{ position: 'absolute', top: -20, left: 28, width: 40, height: 40, background: 'rgba(255,255,255,.9)', borderRadius: '50%' }} />
